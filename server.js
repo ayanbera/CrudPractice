@@ -7,14 +7,15 @@ const path = require('path');
 
 const connectDatabase = require('./Server/database/connection');
 
-const user = require('./Server/routes/router')
+const user = require('./Server/routes/user')
 
 dotenv.config({path :'config.env'});
 const port = process.env.PORT || 8080;
 
 app.use(express.json());
 //log requests
-app.use(morgan("tiny"));
+// app.use(morgan("tiny"));
+
 app.use("api/v1", user)
 
 

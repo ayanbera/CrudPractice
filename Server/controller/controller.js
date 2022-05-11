@@ -1,7 +1,7 @@
 var Userdb = require('../model/model');
 
 //Cerate and save user
-exports.create = (req, res) => {
+exports.createUser = (req, res) => {
 
     //validate request
     if(!req.body) {
@@ -31,7 +31,7 @@ exports.create = (req, res) => {
 
 //retireve and return all users//retrieve and return a single user
 exports.find = ( req, res) => {
-
+  
 }
 
 //Update
