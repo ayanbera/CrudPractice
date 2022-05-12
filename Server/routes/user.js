@@ -11,7 +11,6 @@ router.route('/users').post(createUser);
 
 router.route("/users").get(find);
 
-
 router.route("/users/:id").put(update);
 //router.delete("/api/users/:id", delete);
 

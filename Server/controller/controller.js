@@ -31,6 +31,23 @@ exports.createUser = (req, res) => {
 
 //retireve and return all users//retrieve and return a single user
 exports.find = ( req, res) => {
+
+    if(req.query.id) {
+        const id = req.query.id;
+
+        Ayan.findById(id)
+        .then(data => {
+            if(!data) {
+                res.status(404).send({message: `not found with id ${id}`});
+            } else {
+                res.status(200).send(data);
+            }
+        })
+        .catch(err => {
+            res.status(500).send({message:"error retriving the data"});
+        });
+    }
+
     Ayan.find()
   .then(user => {
       res.send(user)
