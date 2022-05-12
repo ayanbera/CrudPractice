@@ -16,7 +16,7 @@ app.use(express.json());
 //log requests
 // app.use(morgan("tiny"));
 
-app.use("api/v1", user)
+app.use("/api/v1", user)
 
 
 
